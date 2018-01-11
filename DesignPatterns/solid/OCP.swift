@@ -38,18 +38,11 @@ class Book: CustomStringConvertible {
 }
 
 class BookFilter {
-  
-  func filterByColor(books: [Book], color: Color) -> [Book] {
-    return books.filter({$0.color == color})
+ 
+  func filter(books: [Book], _ isValid: (Book) -> Bool) -> [Book] {
+    return books.filter({ isValid($0) })
   }
   
-  func filterBySize(books: [Book], size: Size) -> [Book] {
-    return books.filter({$0.size == size})
-  }
-  
-  func filterBySizeAndColor(books: [Book], color: Color, size: Size) -> [Book] {
-    return books.filter({$0.color == color && $0.size == size})
-  }
 }
 
 struct OCPTest {
@@ -62,9 +55,11 @@ struct OCPTest {
     ]
     
     let filter = BookFilter()
-    let blueBooks = filter.filterByColor(books: books, color: .blue)
-    let mediumBooks = filter.filterBySize(books: books, size: .medium)
+    let redBooks = filter.filter(books: books, { $0.color == .red })
+    let blueBooks = filter.filter(books: books, { $0.color == .blue })
+    let mediumBooks = filter.filter(books: books, { $0.size == .medium })
     
+    redBooks.forEach({ print("-> \($0)") })
     blueBooks.forEach({ print("-> \($0)") })
     mediumBooks.forEach({ print("-> \($0)") })
   }
