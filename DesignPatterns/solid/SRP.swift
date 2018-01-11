@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  SRP.swift
 //  DesignPatterns
 //
 //  Created by Irvin  Castellanos on 1/10/18.
@@ -8,6 +8,4 @@
 
 import Foundation
 
-print("Hello, World!")
 
-OCPTest.run()

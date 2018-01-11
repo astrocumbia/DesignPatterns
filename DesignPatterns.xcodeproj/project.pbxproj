@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9581F7C62006DF6A00665A99 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581F7C52006DF6A00665A99 /* main.swift */; };
+		9581F7CE2006DF9D00665A99 /* SRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581F7CD2006DF9D00665A99 /* SRP.swift */; };
+		9581F7D02006E72700665A99 /* OCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9581F7CF2006E72700665A99 /* OCP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		9581F7C22006DF6A00665A99 /* DesignPatterns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignPatterns; sourceTree = BUILT_PRODUCTS_DIR; };
 		9581F7C52006DF6A00665A99 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9581F7CD2006DF9D00665A99 /* SRP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRP.swift; sourceTree = "<group>"; };
+		9581F7CF2006E72700665A99 /* OCP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,19 @@
 		9581F7C42006DF6A00665A99 /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				9581F7CC2006DF8500665A99 /* solid */,
 				9581F7C52006DF6A00665A99 /* main.swift */,
 			);
 			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		9581F7CC2006DF8500665A99 /* solid */ = {
+			isa = PBXGroup;
+			children = (
+				9581F7CD2006DF9D00665A99 /* SRP.swift */,
+				9581F7CF2006E72700665A99 /* OCP.swift */,
+			);
+			path = solid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9581F7D02006E72700665A99 /* OCP.swift in Sources */,
 				9581F7C62006DF6A00665A99 /* main.swift in Sources */,
+				9581F7CE2006DF9D00665A99 /* SRP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
