@@ -21,7 +21,7 @@ enum Size {
   case large
 }
 
-class Book: CustomStringConvertible {
+class Book {
   var name: String
   var color: Color
   var size: Size
@@ -31,7 +31,9 @@ class Book: CustomStringConvertible {
     self.color = color
     self.size = size
   }
-  
+}
+
+extension Book: CustomStringConvertible {
   var description: String {
     return "Book: \(name) \(color) \(size)"
   }
